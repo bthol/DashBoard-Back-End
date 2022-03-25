@@ -6,10 +6,7 @@ const mongoose = require(`mongoose`);
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.get(`/`, (req, res) => {
-    const ID = req;
-    res.send("index is active")
-})
+
 
 module.export = app.listen(3000, () => {
     console.log("express is online")
