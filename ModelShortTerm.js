@@ -15,6 +15,6 @@ const dataWeek = new Schema ({
 const dataMonth = new Schema ({
     projected: Number,
     completed: Number,
-    date: String
+    date: String,
     rate: Number
 });
