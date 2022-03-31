@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const UserModel = new Schema ({
+const UserSchema = new Schema ({
     username: String,
     password: String,
-    log: {type: Boolean, default: false}
-}, {timestamps = true});
+    log: {in: Boolean, default: false}
+}, {timestamps: true});
 
-const Recipe = mongoose.model('UserModel', UserModel);
+const UserModel = mongoose.model('UserModel', UserSchema);
 
 module.exports = UserModel
