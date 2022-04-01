@@ -11,11 +11,25 @@ const daySchema = new Schema ([
     }
 ]);
 
-const DataModelDay = mongoose.model('DataModelDay', daySchema);
+const DataModel1 = mongoose.model('DataModel1', daySchema);
 
-module.exports = DataModelDay
+module.exports = DataModel1
 
-//for future development
+//JSON format
+// {
+//     "projected": {
+//         "val":"0"
+//     },
+//     "completed": {
+//         "val":"0"
+//     },
+//     "date":"00/00/0000"
+// }
+
+//////////////////////////////////////
+
+//FUTURE DEVELOPMENT
+
 // const dataWeek = new Schema ({
 //     projected: Number,
 //     completed: Number,
