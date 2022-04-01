@@ -16,8 +16,8 @@ app.use(`/data`, DataControl)
 //landing Route
 app.get(`/`, (req, res) => {
     const ID = req;
-    // res.send("index is active")
-    res.redirect(`/data`)
+    res.send("index is active")
+    // res.redirect(`/data`)
     //landing stategy for once user functionality is operational
     // if (UserModel.log.in = true) {
     //     res.redirect(`/user`)

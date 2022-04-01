@@ -1,3 +1,5 @@
+//for handling landing stragety + navigation
+
 // const express = require("express");
 // const app = express();
 

@@ -1,5 +1,9 @@
 # DashBoard
-Devloper: Blake Thollaug
+App Name: Prospek
+
+App Category: Productivity
+
+Developer: Blake Thollaug
 
 Languages: JavaScript, CSS | Libraries/Frameworks: Node.js, Express.js, React.js | Database: MongoDB Atlas, Mongoose | Deployment: Heroku
 
