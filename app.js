@@ -2,7 +2,6 @@
 
 //Dendencies
 const express = require("express");
-const { redirect } = require("express/lib/response");
 const app = express();
 const mongoose = require("mongoose");
 

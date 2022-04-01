@@ -7,7 +7,7 @@ const daySchema = new Schema ([
     {
     projected: {val: Number, default: 0},
     completed: {val: Number, default: 0},
-    date: String,
+    date: String
     }
 ]);
 
