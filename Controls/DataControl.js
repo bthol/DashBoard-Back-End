@@ -33,7 +33,7 @@ router.get(`/`, async (req, res) => {
     } catch (err) {
         res.send({
             success: false,
-            data: err.message
+            error: err.message
         })
     }
 })
@@ -52,7 +52,7 @@ router.post(`/`, async (req, res) => {
     } catch (err) {
         res.send({
             success: false,
-            data: err.message
+            error: err.message
         })
     }
 })
@@ -71,7 +71,7 @@ router.get(`/:id`, async (req, res) => {
     } catch (err) {
         res.send({
             success: false,
-            data: err.message
+            error: err.message
         })
     }
 })
@@ -89,7 +89,7 @@ router.put(`/:id`, async (req, res) => {
     } catch (err) {
         res.send({
             success: false,
-            data: err.message
+            error: err.message
         })
     }
 })
@@ -107,7 +107,7 @@ router.delete(`/:id`, async (req, res) => {
     } catch (err) {
         res.send({
             success: false,
-            data: err.message
+            error: err.message
         })
     }
 })

@@ -5,9 +5,9 @@ const Schema = mongoose.Schema;
 
 const daySchema = new Schema ([
     {
-    projected: {val: Number, default: 0},
-    completed: {val: Number, default: 0},
-    date: String
+    projected: {type: Number, default: 0},
+    completed: {type: Number, default: 0},
+    date: { type: Date, default: Date.now },
     }
 ]);
 
@@ -22,8 +22,7 @@ module.exports = DataModel1
 //     },
 //     "completed": {
 //         "val":"0"
-//     },
-//     "date":"00/00/0000"
+//     }
 // }
 
 //////////////////////////////////////
