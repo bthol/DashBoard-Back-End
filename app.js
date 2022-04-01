@@ -4,10 +4,12 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+var bodyParser = require('body-parser');
 
 //Middleware
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Controller indices
 const DataControl = require("./Controls/DataControl")
