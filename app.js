@@ -1,37 +1,34 @@
-const express = require("express");
-const app = express();
+//start line
 
 //Dendencies
-const mongoose = require(`mongoose`);
-const session = require('express-session')
-
-//module imports
-const UserModel = require(`./Models/UserModel`)
+const express = require("express");
+const { redirect } = require("express/lib/response");
+const app = express();
+const mongoose = require("mongoose");
 
 //Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.set('trust proxy', 1)
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true }
-}))
-
+//Controller indices
+const DataControl = require("./Controls/DataControl")
+app.use(`/data`, DataControl)
 
 //landing Route
 app.get(`/`, (req, res) => {
     const ID = req;
-    res.send("index is active")
-    if (UserModel.log.in = true) {
-        res.redirect(`/user`)
-    } else {
-        res.redirect(`/user/login`)
-    }
+    // res.send("index is active")
+    res.redirect(`/data`)
+    //landing stategy for once user functionality is operational
+    // if (UserModel.log.in = true) {
+    //     res.redirect(`/user`)
+    // } else {
+    //     res.redirect(`/user/login`)
+    // }
 })
 
-app.listen(3000, () => {
-    console.log("express is online")
+module.exports = app.listen(3000, () => {
+    console.log("express is online and running")
 });
+
+//end line
